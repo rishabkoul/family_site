@@ -60,7 +60,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="mailto:rishabkoul2001@gmail.com">
+							<form>
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -76,7 +76,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input onclick="myFunction();" value="Send Message" /></li>
 								</ul>
 							</form>
 						</section>
@@ -116,6 +116,18 @@
 			</div>
 
 		<!-- Scripts -->
+		<script>
+		      function myFunction() {
+		        var input = document.getElementById('email');
+		        email1 = input.value;
+		        var input = document.getElementById('name');
+		        name1 = input.value;
+		        var input = document.getElementById('message');
+		        content1 = input.value;
+
+		        window.location.href = "mailto:rishabkoul2001@gmail.com" + "?subject=My_Form_Submission&body=" + email1 +"%0A"+ name1 +"%0A"+ content1 +"%0A";
+		      }
+		    </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
